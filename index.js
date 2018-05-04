@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client({ disableEveryone: true });
 const aws = require("aws-sdk");
-const aws = require('aws-sdk');
 const token = process.env.TOKEN;
 const prefix = process.env.prefix;
 
