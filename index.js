@@ -6,6 +6,8 @@ const prefix = process.env.prefix;
 
 bot.on("ready", async () => {
   console.log(`Bot is ready! ${bot.user.username}`);
+  console.log(token);
+  console.log(prefix);
 });
 
 bot.on("message", async message => {
