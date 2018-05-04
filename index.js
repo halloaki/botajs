@@ -19,7 +19,7 @@ bot.on("message", async message => {
   let command = messageArray[0];
   let args = messageArray.slice(1);
   // More security
-  if (!command.startsWith(config.prefix)) return;
+  if (!command.startsWith(prefix)) return;
   // Commands
   if (command === `${prefix}userinfo`) {
     let embed = new Discord.RichEmbed();
