@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "aws-sdk": "^2.232.1",
     "discord.js": "^11.3.2"
   }
 }
