@@ -25,7 +25,8 @@ bot.on("message", async message => {
     let embed = new Discord.RichEmbed();
   } else
   if(command === `${prefix}say`){
-    bot.sendMessage(args);
+    console.log(args);
+    message.channel.send(args)
   }
 });
 
