@@ -21,6 +21,9 @@ bot.on("message", async message => {
   // Commands
   if (command === `${prefix}userinfo`) {
     let embed = new Discord.RichEmbed();
+  } else
+  if(command === `${prefix}say`){
+    bot.sendMessage(args);
   }
 });
 
