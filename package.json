@@ -11,6 +11,7 @@
   "dependencies": {
     "aws-sdk": "^2.232.1",
     "discord.js": "^11.3.2",
-    "enmap": "^2.2.1"
+    "enmap": "^2.2.1",
+    "mysql": "^2.15.0"
   }
 }
