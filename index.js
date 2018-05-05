@@ -36,16 +36,7 @@ fs.readdir("./commands/", (err, files) => {
   });
 });
 
-/*bot.on("message", async message => {
-  // Security
-  if (message.author.bot) return;
-  if (message.channel.type === "dm") return;
-  // Splitting shit
-  let messageArray = message.content.split(" ");
-  let command = messageArray[0];
-  let args = messageArray.slice(1);
-  // More security
-  if (!command.startsWith(prefix)) return;
+/*
   // Commands
   if (command === `${prefix}userinfo`) {
     let embed = new Discord.RichEmbed()
