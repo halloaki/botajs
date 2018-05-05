@@ -1,10 +1,10 @@
-module.exports = (bot, message) => {
-  const prefix = process.env.prefix;
+module.exports = (client, message) => {
+  const prefix = client.config.prefix;
   if (message.author.bot) return;
   if (message.channel.type === "dm") return;
-  if (message.content.indexOf(client.config.prefix) !== 0) return;
+  if (message.content.indexOf(prefix) !== 0) return;
 
-  const args = message.content.slice(client.config.prefix.length).trim().split(/ +/g);
+  const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
 
   const cmd = client.commands.get(command);
