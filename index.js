@@ -32,6 +32,10 @@ bot.on("message", async message => {
 
     message.channel.sendEmbed(embed);
   } else if (command === `${prefix}say`) {
+    var str = "";
+    for (var i = 0; i < args.length; i++) {
+      str += args[i] + " ";
+    }
     message.channel.send(args);
     message.delete();
   }
