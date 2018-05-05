@@ -33,6 +33,7 @@ bot.on("message", async message => {
     message.channel.sendEmbed(embed);
   } else if (command === `${prefix}say`) {
     message.channel.send(args);
+    message.delete;
   }
 });
 
