@@ -8,12 +8,12 @@ const token = process.env.TOKEN;
 const prefix = config.prefix;
 client.config = config;
 
-fs.readdir("./events/" ,(err,files) =>{
-  if(err) return console.error(err);
+fs.readdir("./events/", (err, files) => {
+  if (err) return console.error(err);
   files.forEach(file => {
-    const event = require(`./events/${file}`);
+    let eventFunction = require(`./events/${file}`);
     let eventName = file.split(".")[0];
-    client.on(eventName, event.bind(null, client));
+    client.on(eventName, (...args) => eventFunction.run(client, ...args));
   });
 });
 
