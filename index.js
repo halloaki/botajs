@@ -57,7 +57,9 @@ bot.on("message", async message => {
     var randomNumber = Math.floor(Math.random() * possibleResponses.length);
     message.channel.send(possibleResponses[randomNumber]);
   } else if (command === `${prefix}roll`) {
-    message.channel.send(Math.floor(math.random() * 6) + 1);
+    message.channel.send("You rolled a " + Math.floor(math.random() * 6) + 1);
+  } else if (command === `${prefix}cookie`){
+
   }
 });
 
