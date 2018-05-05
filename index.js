@@ -59,7 +59,7 @@ bot.on("message", async message => {
   } else if (command === `${prefix}roll`) {
     message.channel.send("You rolled a " + Math.floor(math.random() * 6) + 1);
   } else if (command === `${prefix}cookie`){
-
+    message.channel.send(message.author.username + " gave a cookie to " + args[0])
   }
 });
 
