@@ -8,12 +8,6 @@ const token = process.env.TOKEN;
 const prefix = config.prefix;
 client.config = config;
 
-client.on("ready", async () => {
-  console.log(`Bot is ready! ${client.user.username}`);
-  console.log(token);
-  console.log(prefix);
-});
-
 fs.readdir("./events/" ,(err,files) =>{
   if(err) return console.error(err);
   files.forEach(file => {
