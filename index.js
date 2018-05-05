@@ -2,7 +2,8 @@ const Discord = require("discord.js");
 const bot = new Discord.Client({ disableEveryone: true });
 const aws = require("aws-sdk");
 const token = process.env.TOKEN;
-const prefix = process.env.prefix;g
+const prefix = process.env.prefix;
+g;
 bot.on("ready", async () => {
   console.log(`Bot is ready! ${bot.user.username}`);
   console.log(token);
@@ -25,7 +26,10 @@ bot.on("message", async message => {
       .setAuthor(message.author.username)
       .setDescription("Info about the user")
       .setColor("#FF0000")
-      .addField("Full Username: ", `${message.author.username}${message.author.discriminator}`)
+      .addField(
+        "Full Username: ",
+        `${message.author.username}${message.author.discriminator}`
+      )
       .addField("ID: ", `${message.author.id}`)
       .addField("Created At: ", `${message.author.createdAt}`);
 
@@ -37,7 +41,7 @@ bot.on("message", async message => {
     }
     message.channel.send(str);
     message.delete();
-  } else if (command === `${prefix}eightball` ||`${prefix}8ball`){
+  } else if (command === `${prefix}eightball` || `${prefix}8ball`) {
     var possibleResponses = [
       "Doesn't look like it",
       "Probably not",
@@ -52,6 +56,8 @@ bot.on("message", async message => {
     ];
     var randomNumber = Math.floor(Math.random() * possibleResponses.length);
     message.channel.send(possibleResponses[randomNumber]);
+  } else if (command === `${prefix}roll`) {
+    message.channel.send(Math.floor(math.random() * 6) + 1);
   }
 });
 
