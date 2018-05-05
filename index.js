@@ -36,7 +36,7 @@ bot.on("message", async message => {
     for (var i = 0; i < args.length; i++) {
       str += args[i] + " ";
     }
-    message.channel.send(args);
+    message.channel.send(str);
     message.delete();
   }
 });
