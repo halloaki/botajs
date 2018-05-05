@@ -39,6 +39,8 @@ bot.on("message", async message => {
     }
     message.channel.send(str);
     message.delete();
+  } else if (command === `${prefix}eightball` ||`${prefix}8ball`){
+    message.channel.send(fun.eightball());
   }
 });
 
