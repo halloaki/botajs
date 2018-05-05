@@ -34,11 +34,7 @@ bot.on("message", async message => {
 
     message.channel.sendEmbed(embed);
   } else if (command === `${prefix}say`) {
-    var str = "";
-    for (var i = 0; i < args.length; i++) {
-      str += args[i] + " ";
-    }
-    message.channel.send(str);
+    message.channel.send(args.join(" "));
     message.delete();
   } else if (command === `${prefix}eightball` || command === `${prefix}8ball`) {
     var possibleResponses = [
