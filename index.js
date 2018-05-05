@@ -41,7 +41,7 @@ bot.on("message", async message => {
     }
     message.channel.send(str);
     message.delete();
-  } else if (command === `${prefix}eightball` || `${prefix}8ball`) {
+  } else if (command === `${prefix}eightball` || command === `${prefix}8ball`) {
     var possibleResponses = [
       "Doesn't look like it",
       "Probably not",
@@ -57,7 +57,7 @@ bot.on("message", async message => {
     var randomNumber = Math.floor(Math.random() * possibleResponses.length);
     message.channel.send(possibleResponses[randomNumber]);
   } else if (command === `${prefix}roll`) {
-    message.channel.send("You rolled a " + Math.floor(math.random() * 6) + 1);
+    message.channel.send("You rolled a " + Math.floor(Math.random() * 6) + 1);
   } else if (command === `${prefix}cookie`) {
     message.channel.send(
       message.author.username + " gave a cookie to " + args[0]
@@ -70,7 +70,7 @@ bot.on("message", async message => {
       "sorry maybe the shaman will make it rain tomorrow...",
       "the well has dried up!"
     ];
-    message.channel.send(phrases[math.floor(Math.random() * phrases.length)]);
+    message.channel.send(phrases[Math.floor(Math.random() * phrases.length)]);
   }
 });
 
