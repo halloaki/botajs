@@ -1,10 +1,8 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client({ disableEveryone: true });
 const aws = require("aws-sdk");
-const fun = require("fun.js")
 const token = process.env.TOKEN;
-const prefix = process.env.prefix;
-
+const prefix = process.env.prefix;g
 bot.on("ready", async () => {
   console.log(`Bot is ready! ${bot.user.username}`);
   console.log(token);
@@ -40,7 +38,20 @@ bot.on("message", async message => {
     message.channel.send(str);
     message.delete();
   } else if (command === `${prefix}eightball` ||`${prefix}8ball`){
-    message.channel.send(fun.eightball());
+    var possibleResponses = [
+      "Doesn't look like it",
+      "Probably not",
+      "I can only see so far in the future",
+      "It is likely",
+      "Perhaps",
+      "If I say yes, will you leave me alone?",
+      "Yes, no, maybe...",
+      "Do I look like a magical ball that tells the future? Oh wait...",
+      "Yes",
+      "No"
+    ];
+    var randomNumber = Math.floor(Math.random() * possibleResponses.length);
+    message.channel.send(possibleResponses[randomNumber]);
   }
 });
 
