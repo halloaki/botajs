@@ -3,7 +3,6 @@ const bot = new Discord.Client({ disableEveryone: true });
 const aws = require("aws-sdk");
 const token = process.env.TOKEN;
 const prefix = process.env.prefix;
-g;
 bot.on("ready", async () => {
   console.log(`Bot is ready! ${bot.user.username}`);
   console.log(token);
