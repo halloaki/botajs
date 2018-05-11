@@ -14,4 +14,5 @@ exports.run = (client, message, args) => {
     .addField("Mee6 Scoreboard", " https://mee6.xyz/levels/252510569968435200")
     .addField("ID: ", `${message.author.id}`)
     .addField("Created At: ", `${message.author.createdAt}`);
+    message.channel.sendEmbed(embed);
 };
