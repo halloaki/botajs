@@ -2,7 +2,7 @@ exports.run = (client, message) => {
   const prefix = client.config.prefix;
   if (message.author.bot) return;
   if (message.channel.type === "dm") return;
-  if (message.content.includes("shro")) message.channel.send("It's SCHRÖ!!!");
+  if (message.content.toLowerCase().includes("shro")) message.channel.send("It's SCHRÖ!!!");
   if (message.content.includes("sota") || message.content.includes("Sota")) message.channel.send("It's SotA!!!");
   if (message.content.indexOf(prefix) !== 0) return;
 
