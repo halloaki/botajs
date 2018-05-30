@@ -44,7 +44,7 @@ exports.run = (client, message, args) => {
             const chosen = reaction.emoji.name;
             if (chosen === "🇹🇼") {
               var twd = pound * 39.74;
-              twd = parseFloat(pound).toFixed(2);
+              twd = parseFloat(twd).toFixed(2);
               message.channel.send(`It should be worth around ${twd} TWD`);
             } else if (chosen === "🇪🇺") {
               var euro = pound * 1.14;
