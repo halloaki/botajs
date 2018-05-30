@@ -12,7 +12,7 @@ exports.run = (client, message, args) => {
       if (chosen === "🇹🇼") {
         var pound = args[0] * 39.74;
         pound = parseFloat(pound).toFixed(2);
-        message.channel.send(`It should be worth around ${pound} Pounds`);
+        message.channel.send(`It should be worth around ${pound} TWD`);
       } else if (chosen === "🇪🇺") {
         var euro = args[0] * 1.14;
         euro = parseFloat(euro).toFixed(2);

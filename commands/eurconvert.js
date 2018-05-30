@@ -12,11 +12,11 @@ exports.run = (client, message, args) => {
         if (chosen === "🇹🇼") {
           var pound = args[0] * 34.89;
           pound = parseFloat(pound).toFixed(2);
-          message.channel.send(`It should be worth around ${pound} Pounds`);
+          message.channel.send(`It should be worth around ${pound} TWD`);
         } else if (chosen === "🇬🇧") {
           var euro = args[0] * 0.88;
           euro = parseFloat(euro).toFixed(2);
-          message.channel.send(`It should be worth around ${euro} Euros`);
+          message.channel.send(`It should be worth around ${euro} Pounds`);
         } else {
           // Stop navigating pages
         }
